@@ -3,6 +3,7 @@ import ProductList from "./component/ProductList";
 import Cart from "./component/Cart";
 import { useDispatch, useSelector } from 'react-redux';
 import {add, remove} from "./actions";
+import cartIcon from "./assets/images/cart-icon.png";
 import './App.css';
 
 function App() {
@@ -15,13 +16,16 @@ function App() {
 
   const handleRemove = id => {
     dispatch(remove(id))
-  }
+}
 
 
   return (
     <div className="App">
       <header className="App-header">
-       <h1>Shopping Cart</h1>
+        <div className='heading'> 
+          <img src={cartIcon} alt="cart"className='cart-img'/>
+          <h2>Shopping Cart</h2>
+        </div>
        <div className="container">
           <div className='list-wrapper'>
             <h3>Products</h3>

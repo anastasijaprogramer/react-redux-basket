@@ -8,13 +8,14 @@ function ProductList({ productList, handleAdd }) {
       {productList.map(product => {
         const quan = product.quanTotal - product.quanSell - product.quanCart;
         return (
-          <>
-            <Product key={product.id} product={product} quan={quan} />
-            <button
+          <div className='list-item-wrapper'>
+             <button
               onClick={() => handleAdd(product.id)}
               disabled={quan === 0}
             >Add to cart</button>
-          </>
+            <Product key={product.id} product={product} quan={quan} />
+           
+          </div>
         );
       })}
     </ul>
