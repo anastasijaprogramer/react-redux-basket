@@ -6,7 +6,7 @@ const defaultState = {
             price: 2,
             quanTotal: 10,
       quanSell: 0,
-      quanCart: 3,
+      quanCart: 0,
         },
         {
             id: 2,
@@ -14,7 +14,7 @@ const defaultState = {
             price: 4,
             quanTotal: 10,
             quanSell: 0,
-            quanCart: 3,
+            quanCart: 0,
         },
         {
             id: 3,
@@ -22,7 +22,7 @@ const defaultState = {
             price: 5,
             quanTotal: 10,
             quanSell: 0,
-            quanCart: 3,
+            quanCart: 0,
         },
 
     ]

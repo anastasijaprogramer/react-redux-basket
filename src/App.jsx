@@ -21,14 +21,19 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-       <h2>Shopping Cart</h2>
-       <hr/>
-       <h3>Products</h3>
-       <ProductList productList={productList} handleAdd={handleAdd}/>
-
-       <hr/>
-       <h3>Your Cart</h3>
-       {productList && <Cart productList={productList} handleRemove={handleRemove}/>}
+       <h1>Shopping Cart</h1>
+       <div className="container">
+          <div className='list-wrapper'>
+            <h3>Products</h3>
+            <ProductList productList={productList} handleAdd={handleAdd}/>
+          </div>
+          <div className='list-wrapper'>
+              <h3>Your Cart</h3>
+              {productList && <Cart productList={productList} handleRemove={handleRemove}/>}
+          </div>
+         
+       </div>
+     
       </header>
     </div>
   );
